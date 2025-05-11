@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 export default function ImageUploader({ setCustomImage }) {
   const [dragActive, setDragActive] = useState(false);
   const [previewUrl, setPreviewUrl] = useState(
-    "/images/default-shirt-image.svg"
+    "/images/3204121-removebg-preview.png"
   ); // Updated path to our SVG
   const inputRef = useRef(null);
 
@@ -73,7 +73,7 @@ export default function ImageUploader({ setCustomImage }) {
             <button
               className="remove-image-btn"
               onClick={() => {
-                setPreviewUrl("/images/default-shirt-image.svg"); // Updated path here as well
+                setPreviewUrl("/images/3204121-removebg-preview.png"); // Updated path here as well
                 setCustomImage(null);
               }}
               type="button"
