@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D T-Shirt Model Instructions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+      }
+      .steps {
+        margin-top: 20px;
+      }
+      .step {
+        margin-bottom: 15px;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      .note {
+        background-color: #fffde7;
+        border-left: 4px solid #fbc02d;
+        padding: 10px;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adding 3D T-Shirt Models</h1>
+
+    <p>
+      This directory is where the 3D T-shirt models should be placed. The
+      application is looking for a file named <code>shirt.glb</code>.
+    </p>
+
+    <div class="note">
+      <p>
+        <strong>Note:</strong> Since we couldn't automatically download the
+        models from the GitHub repository, you'll need to manually add them.
+      </p>
+    </div>
+
+    <div class="steps">
+      <h2>Steps to Add the 3D T-shirt Model:</h2>
+
+      <div class="step">
+        <h3>1. Download the Model</h3>
+        <p>
+          Download the T-shirt model from the GitHub repository:
+          <a
+            href="https://github.com/Starklord17/threejs-t-shirt"
+            target="_blank"
+            >https://github.com/Starklord17/threejs-t-shirt</a
+          >
+        </p>
+      </div>
+
+      <div class="step">
+        <h3>2. Place the Model Here</h3>
+        <p>
+          Place the downloaded GLB file in this directory
+          (<code>/models/</code>) and rename it to <code>shirt.glb</code>.
+        </p>
+      </div>
+
+      <div class="step">
+        <h3>3. Restart the Application</h3>
+        <p>Restart the application for the changes to take effect.</p>
+      </div>
+    </div>
+
+    <p>
+      Once you've completed these steps, the 3D T-shirt model should load in the
+      3D view when you press Alt+Q.
+    </p>
+  </body>
+</html>
