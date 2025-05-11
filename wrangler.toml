@@ -1,9 +1,0 @@
-name = "cloudexpresssolution"
-compatibility_date = "2025-05-11"
-# Remove the main line that's causing the HTML loader error
-
-[site]
-bucket = "./dist"
-
-[build]
-command = "npm run build"
