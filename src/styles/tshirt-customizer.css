@@ -1,0 +1,597 @@
+/* Main T-Shirt Customizer Styles */
+
+/* General Layout */
+.t-shirt-customizer {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.t-shirt-customizer h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.t-shirt-customizer p.description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.customizer-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.customizer-column {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.primary-button {
+  background-color: #4f46e5;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.primary-button:hover {
+  background-color: #4338ca;
+}
+
+.secondary-button {
+  background-color: #8b5cf6;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.secondary-button:hover {
+  background-color: #7c3aed;
+}
+
+/* Measurement Box Styles */
+.size-customizer {
+  margin-bottom: 20px;
+}
+
+.measurements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .measurements-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.measurement-box {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.measurement-box label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.measurement-box .range-container {
+  display: flex;
+  align-items: center;
+}
+
+.measurement-box input[type="range"] {
+  width: 100%;
+}
+
+.measurement-box .value-display {
+  margin-left: 8px;
+  font-family: monospace;
+  font-size: 0.875rem;
+  width: 3rem;
+  text-align: right;
+}
+
+.measurement-box select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Color Options */
+.color-options {
+  display: flex;
+  gap: 8px;
+}
+
+.color-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.color-swatch {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #cbd5e1;
+  transition: border-color 0.2s;
+}
+
+.color-option input[type="radio"]:checked + .color-swatch {
+  border-color: #4f46e5;
+}
+
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Image Uploader */
+.image-uploader {
+  margin-bottom: 20px;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.dropzone.active {
+  border-color: #4f46e5;
+  background-color: #f5f3ff;
+}
+
+.image-preview {
+  position: relative;
+  width: 100%;
+}
+
+.image-preview img {
+  margin: 0 auto;
+  height: 12rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ef4444;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.dropzone-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.select-file-btn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.select-file-btn:hover {
+  background-color: #4338ca;
+}
+
+.image-uploader-note {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* Text Customizer */
+.text-customizer {
+  margin-bottom: 20px;
+}
+
+.text-input-container {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text-input-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.text-customizer .guidelines {
+  margin-top: 0.75rem;
+}
+
+.text-customizer .guidelines p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.text-error {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* T-shirt Viewer */
+.t-shirt-viewer {
+  margin-bottom: 20px;
+}
+
+.viewer-container {
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.viewer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.toggle-hint {
+  font-size: 0.875rem;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.toggle-hint .kbd {
+  font-family: monospace;
+}
+
+.t-shirt-preview {
+  position: relative;
+}
+
+.t-shirt-base-container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
+}
+
+.t-shirt-base {
+  width: 100%;
+  padding-bottom: 120%;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.t-shirt-neck {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 30%;
+  height: 8%;
+  transform: translateX(-50%);
+  background-color: #f8f9fa;
+  border-radius: 0 0 40% 40%;
+}
+
+.t-shirt-sleeve-left {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 20%;
+  height: 15%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.t-shirt-sleeve-right {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 20%;
+  height: 15%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.t-shirt-image {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-shirt-image img {
+  max-width: 80%;
+  max-height: 70%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.t-shirt-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-shirt-text-container {
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 90%;
+}
+
+.t-shirt-text-line {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.size-info {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* 3D Model Viewer */
+.threed-viewer {
+  height: 400px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border-left-color: #4f46e5;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.threed-placeholder {
+  text-align: center;
+  padding: 1rem;
+}
+
+.threed-placeholder-emoji {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.threed-placeholder-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.threed-placeholder-desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.threed-placeholder-link {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.threed-placeholder-link:hover {
+  text-decoration: underline;
+}
+
+.threed-placeholder-dimensions {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.dimension-box {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.dimension-box strong {
+  font-weight: 600;
+}
+
+/* Header & Footer */
+.header {
+  background: linear-gradient(to right, #6d28d9, #4f46e5);
+  color: white;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    margin-bottom: 0;
+  }
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+  color: #9ca3af;
+}
+
+.footer-links-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.25rem;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-copyright {
+  border-top: 1px solid #374151;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .customizer-column {
+    flex: 100%;
+  }
+}

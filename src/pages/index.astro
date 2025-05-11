@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TShirtCustomizer from '../components/TShirtCustomizer/TShirtCustomizer';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="POD T-Shirt Customizer">
+	<main class="t-shirt-customizer">
+		<TShirtCustomizer client:load />
+	</main>
 </Layout>
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: #f6f6f6;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

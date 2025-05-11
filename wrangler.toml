@@ -1,0 +1,9 @@
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm run build"
+upload.format = "directory"
+
+[build.upload]
+format = "service-worker"
