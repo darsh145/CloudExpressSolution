@@ -1,6 +1,6 @@
 name = "cloudexpresssolution"
 compatibility_date = "2025-05-11"
-main = "./dist/index.html"  # Point to the entry file in the dist directory
+# Remove the main line that's causing the HTML loader error
 
 [site]
 bucket = "./dist"
